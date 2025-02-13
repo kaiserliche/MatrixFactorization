@@ -1,5 +1,6 @@
 import numpy as np
 from tqdm import tqdm
+import os
 # from models.abstract import AbstractModel
 
 class Model:
@@ -108,6 +109,7 @@ class Model:
         return avg_hit_rates
 
     def save(self):
+        os.makedirs(self.config['save_path'], exists_ok = True)
         np.save(f"{self.config['save_path']}/X.npy", self.X)
         np.save(f"{self.config['save_path']}/Y.npy", self.Y)
         np.save(f"{self.config['save_path']}/user_bias.npy", self.user_bias)
