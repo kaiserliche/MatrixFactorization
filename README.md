@@ -16,4 +16,9 @@ Evaluation Metric Used -
 2. Custom Evaluation using mean bucketized ranks - Used on Implicit MF on Test Set
 3. RMSE - Used on Training set of Explicit MF
 
+To run the experiment:
+
+```
+python3 main.py --config configs/<your_choice>.yaml
+```
 
