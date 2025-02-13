@@ -1,0 +1,28 @@
+model :
+  name : "als_with_confidence_matrix_implicit"
+  n_factors : 50
+  n_iter : 50
+  lamda : 0.5
+  alpha : 0
+  save_path : "dump/implicit/confidence"
+
+
+data :
+  name : movielens1m
+  rcols : ["userid", "movieid", "rating", "timestamp"]
+  mcols : ["movieid","movie", "genres"]
+  rawPath : "odedgolden/movielens-1m-dataset"
+  ratingFile : "ratings.dat"
+  movieFile : "movies.dat"
+  sep : "::"
+  header : None
+  processedPath : "data/movielens1m.csv"
+  train : "data/movielens1m_train.csv"
+  test : "data/movielens1m_test.csv"
+  train_size : 0.8
+  seed : 42
+  use_cache : True
+  URM : "data/train_user_item_matrix.npy"
+  UIM : "data/user_interaction_matrix.npy"
+  UGM : "data/user_genre_matrix.npy"
+  testdf : "data/test_df.csv"
