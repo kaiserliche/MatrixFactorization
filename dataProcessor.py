@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import kagglehub
+import os
 
 class DataLoader:
     def __init__(self, config):
@@ -88,6 +89,7 @@ class DataLoader:
 
         
     def save_data(self):
+        os.makedirs(self.config["dataFolder"], exist_ok=True)
         np.save(self.config["URM"], self.U)
         np.save(self.config["UIM"], self.C)
         np.save(self.config["UGM"], self.G)
