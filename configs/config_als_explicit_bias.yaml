@@ -15,6 +15,7 @@ data :
   movieFile : "movies.dat"
   sep : "::"
   header : None
+  dataFolder : "data"
   processedPath : "data/movielens1m.csv"
   train : "data/movielens1m_train.csv"
   test : "data/movielens1m_test.csv"
