@@ -1,6 +1,7 @@
 import numpy as np
 from tqdm import tqdm
 from models.abstract import AbstractModel
+import os
 
 class Model:
     def __init__(self, config):
@@ -122,6 +123,7 @@ class Model:
         return avg_hit_rates
 
     def save(self):
+        os.makedirs(self.config['save_path'])
         np.save(f"{self.config['save_path']}/X.npy", self.X)
         np.save(f"{self.config['save_path']}/Y.npy", self.Y)
 
