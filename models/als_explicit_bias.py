@@ -64,7 +64,7 @@ class Model:
             self.user_bias[u], self.X[u] = theta[0], theta[1:]
 
     def save(self):
-        os.makedirs(self.config['save_path'], exists_ok = True)
+        os.makedirs(self.config['save_path'], exist_ok = True)
         np.save(f"{self.config['save_path']}/X.npy", self.X)
         np.save(f"{self.config['save_path']}/Y.npy", self.Y)
         np.save(f"{self.config['save_path']}/user_bias.npy", self.user_bias)

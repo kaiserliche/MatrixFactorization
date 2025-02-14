@@ -23,7 +23,7 @@ python3 main.py --configs/<your_choice.yaml>
 
 ## Results
 
-- The values are based on a custom metric. Values closer to 0 represents a perfect alighnment while closer to 4 represents worst alignment. You can see the implementation in [eval.py](models/eval.py)) 
+- The values are based on a custom metric. Values closer to 0 represents a perfect alighnment while closer to 4 represents worst alignment. You can see the implementation in [eval.py](models/eval.py)
 
 Implicit MF with Bias vector - 
 

@@ -2,8 +2,8 @@ model :
   name : "als_with_confidence_matrix_implicit"
   n_factors : 50
   n_iter : 100
-  lamda : 0.5
-  alpha : 0
+  lamda : 1
+  alpha : 1
   save_path : "dump/implicit/confidence"
 
 

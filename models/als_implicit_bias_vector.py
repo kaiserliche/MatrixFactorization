@@ -33,6 +33,8 @@ class Model:
         print("Starting training...")
         print("Note : Hit rates are on train data and other metrics are on Test data")
         for i in tqdm(range(self.n_iter)):
+            # if i == 15:
+            #     self.lamda *= 10
             self.step()
             metrics = self.evaluate(self.U, self.k)  
             print(f"Hit Rate@1 = {metrics['Hit Rate@1']:.4f}, "
@@ -109,7 +111,7 @@ class Model:
         return avg_hit_rates
 
     def save(self):
-        os.makedirs(self.config['save_path'], exists_ok = True)
+        os.makedirs(self.config['save_path'], exist_ok = True)
         np.save(f"{self.config['save_path']}/X.npy", self.X)
         np.save(f"{self.config['save_path']}/Y.npy", self.Y)
         np.save(f"{self.config['save_path']}/user_bias.npy", self.user_bias)

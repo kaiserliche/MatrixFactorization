@@ -123,7 +123,7 @@ class Model:
         return avg_hit_rates
 
     def save(self):
-        os.makedirs(self.config['save_path'])
+        os.makedirs(self.config['save_path'], exist_ok=True)
         np.save(f"{self.config['save_path']}/X.npy", self.X)
         np.save(f"{self.config['save_path']}/Y.npy", self.Y)
 

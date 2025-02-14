@@ -1,9 +1,9 @@
 model :
   name : "als_with_bias_implicit"
   n_factors : 50
-  n_iter : 1000
-  lamda : 0.2
-  alpha : 0.0
+  n_iter : 100
+  lamda : 2
+  alpha : 1
   k : [1,5,10,20]
   save_path : "dump/implicit/biasVector"
 
